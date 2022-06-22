@@ -98,7 +98,7 @@ function mouseUp() { // mouseIsDown becomes false and it removes the added colou
         for (const p of points) {
             p.classList.remove("pointColour"); // removes the colour
         }
-        symInput.clear();//delete array
+        symInput.clear(); //delete array
         oldcol = -42
         oldrow = -42
     }
@@ -131,6 +131,7 @@ function castMagic() {
             case "LineRight":
             case "LineUp":
             case "LineDown":
+                spellChoice = "Slash";
                 spellAnimation();
                 break;
             case "LightningAttack":

@@ -17,6 +17,13 @@ function spellAnimation() {
 
     /* The Style changes of player spells*/
     switch (spellChoice) {
+        case "Slash":
+            console.log("Slash")
+            elem.style.backgroundColor = "black"
+            elem.style.borderRadius = "0%"
+            elem.style.width = "5vh";
+            elem.style.height = "5vh";
+            break;
         case "Lightning":
             console.log("Lightning")
             elem.style.backgroundColor = "aqua";
@@ -37,9 +44,6 @@ function spellAnimation() {
             elem.style.borderRadius = "20%"
             elem.style.height = "30%";
             elem.style.width = "100%";
-            break;
-        default:
-            console.log("Slash")
             break;
     }
     elem.setAttribute("pos", "65"); // start position of spell
