@@ -15,10 +15,7 @@ html, body {
     overflow: hidden;
 }
 
-
-/**
-work
- */
+/* work */
 @media (min-aspect-ratio: 9/16) {
     /* Legt das Seitenverhältnis an einer gewissen Breite fest */
     main {
@@ -28,134 +25,21 @@ work
     }
 }
 
-/* Muster Box */
-.grid-container {
-    position: fixed;
-    top: 100%;
-    left: 50%;
-    margin-top: -15vh; /* halbe Breite/Höhe */
-    width: 30vh;
-    height: 30vh;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #ccc;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-}
-
-/* Ende Responsive Design */
-
-
-.grid-container > div {
-    position: relative;
-    text-align: center;
-    padding: 1em 0;
-    font-size: 1em;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-
-}
-
-.point {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    background-color: black;
-    height: 30%;
-    width: 30%;
-    margin: -15% 0 0 -15%;
-}
-
-.pointColour {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    background-color: red;
-    height: 30%;
-    width: 30%;
-    margin: -15% 0 0 -15%;
-}
-
-
-.spellAnimation {
-    width: 5vh;
-    height: 5vh;
-    margin: auto;
-    position: sticky;
-    border-radius: 50%;
-    background-color: blue;
-    visibility: hidden;
-    z-index: 2;
-}
-
-
-#enemyAttack {
-    padding-top: 0vh;
-    width: 5vh;
-    height: 5vh;
-    margin: auto;
-    position: relative;
-    border-radius: 50%;
-    visibility: hidden;
-    background-color: red;
-    z-index: 2;
-}
-
-
-.myEnemy {
-    padding-top: 10vh;
-    margin: auto;
-    position: relative;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0vh 10vh 20vh 10vh;
-    border-color: transparent transparent white transparent;
-    z-index: 3;
-
-
-}
-
-.boeseAugen1 {
-    position: relative;
-    width: 0px;
-    height: 0px;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    margin-left: 0%;
-    transform: translate(-120%, 270%);
-    border-style: solid;
-    border-width: 0vh 2.5vh 3vh 0vh;
-    z-index: 10;
-    border-color: transparent transparent #200022 transparent;
-}
-
-.boeseAugen2 {
-    position: relative;
-    width: 0px;
-    height: 0px;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    margin-left: 0%;
-    transform: translate(20%, 170%);
-    border-style: solid;
-    border-width: 0vh 0vh 3vh 2.5vh;
-    z-index: 10;
-    border-color: transparent transparent #200022 transparent;
-}
-
-#mainMenu { /* TODO make it responisve*/
+/* The Style of the Games Menu */
+#mainMenu {
     height: 100vh;
-    position: center;
+    position: relative;
+    margin: auto;
     font-size: 10vh;
 }
 
-#gameStart { /* this 3 are */
+/* This four are the Style of the menu "options"*/
+#gameBack {
+    color: darkred;
+    visibility: hidden;
+}
+
+#gameStart {
     top: 10vh;
     color: darkred;
 }
@@ -170,18 +54,93 @@ work
     height: 0px;
 }
 
-#gameBack {
-    color: darkred;
+/* The whole Style of the Tutorial "page"*/
+#mainTutorial {
     visibility: hidden;
+    margin: auto;
+    position: relative;
+    top: 20vh;
 }
 
+/* The Style of the tutorial text*/
+p {
+    margin: auto;
+    padding: 2vh;
+    font-size: 2.5vh;
+    color: darkred;
+}
+
+/* The Style of the tutorial Picture*/
+#tutorialPic {
+    margin: auto;
+    width: 45vh;
+    height: 45vh;
+    content: url("big tutorial.png");
+}
+
+/* The Style of the Game screen*/
 #gameMain {
     visibility: hidden;
 }
 
+/* The Style of the enemy's spells*/
+#enemyAttack {
+    padding-top: 0vh;
+    width: 5vh;
+    height: 5vh;
+    margin: auto;
+    position: relative;
+    border-radius: 50%;
+    visibility: hidden;
+    background-color: red;
+    z-index: 2;
+}
 
+/* The starting Style of the enemy, they are change through Json*/
+.myEnemy {
+    padding-top: 10vh;
+    margin: auto;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0vh 10vh 20vh 10vh;
+    border-color: transparent transparent white transparent;
+    z-index: 3;
+}
+
+/* The evilEye's are the eyes of the enmy*/
+.evilLeftEye {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    transform: translate(-120%, 270%);
+    border-style: solid;
+    border-width: 0vh 2.5vh 3vh 0vh;
+    z-index: 10;
+    border-color: transparent transparent #200022 transparent;
+}
+
+.evilRightEye {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    transform: translate(20%, 170%);
+    border-style: solid;
+    border-width: 0vh 0vh 3vh 2.5vh;
+    z-index: 10;
+    border-color: transparent transparent #200022 transparent;
+}
+
+/* the header are the enemy and player health*/
+/* The Style of the enemy's life Counter*/
 h1 {
-
     position: absolute;
     padding: 1vh;
     font-size: 4vh;
@@ -189,6 +148,7 @@ h1 {
     color: darkred;
 }
 
+/* The Style of the player's life Counter*/
 h2 {
     position: absolute;
     padding: 1vh;
@@ -197,31 +157,72 @@ h2 {
     color: darkgreen;
 }
 
-h3 {
-    position: center;
-    font-size: 4vh;
-    color: darkred;
-}
-
-#mainTutorial {
+/* The Style of the player Spellspell "slash", they are changed in the animation.js
+ if another spell was "casted". Also this Style is used when a new div is created through
+  document.create in animation.js*/
+.spellAnimation {
+    width: 5vh;
+    height: 5vh;
+    margin: auto;
+    position: sticky;
+    border-radius: 0;
+    background-color: black;
     visibility: hidden;
-    margin: auto;
+    z-index: 2;
+}
+
+/* The Style of the container in which spells are draw */
+.grid-container {
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    margin-top: -15vh; /* halbe Breite/Höhe */
+    width: 30vh;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #ccc;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.grid-container > div {
     position: relative;
-    top: 20vh;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1em;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 
 }
 
-#tutorialPic {
-    margin: auto;
-    width: 45vh;
-    height: 45vh;
-    content: url("big tutorial.png");
+/* The Style of the points which have to be "activated" to cast a spell*/
+.point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: black;
+    height: 30%;
+    width: 30%;
+    margin: -15% 0 0 -15%;
 }
 
-p {
-    margin: auto;
-    padding: 2vh;
-    font-size: 2.5vh;
-    color: darkred;
+/* The changed Style of the points after they are activated*/
+.pointColour {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: red;
+    height: 30%;
+    width: 30%;
+    margin: -15% 0 0 -15%;
 }
+
+
+
 

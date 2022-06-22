@@ -18,9 +18,7 @@ function spellAnimation() { //movement and style changing of #myAnimation
 
     switch (spellChoice) { //TODO each case changes the style of the spell, maybe make it into a class?
         case "Slash":
-            console.log("Slash") // test delete
-            elem.style.backgroundColor = "black"; // changes colour from spell
-            elem.style.borderRadius = "0%"; // changes form of spell
+            console.log("Slash")
             break;
         case "Lightning":
             console.log("Lightning")
@@ -65,8 +63,7 @@ function frame() { // function for the movement of spells
             spellCount[i].style.top = spellCount[i].getAttribute("pos") + 'vh'; // changes the postion of the object by 1vh
             elem.style.visibility = "visible"; // makes the spell visible
 
-            a++ // test delete both
-            console.log(a);
+
 
 
         }
