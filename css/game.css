@@ -1,0 +1,227 @@
+/* Responsive Design and CSS  */
+main {
+    background-color: gray;
+    height: 100%;
+    z-index: -2;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+
+/**
+work
+ */
+@media (min-aspect-ratio: 9/16) {
+    /* Legt das Seitenverhältnis an einer gewissen Breite fest */
+    main {
+        width: 56vh;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+/* Muster Box */
+.grid-container {
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    margin-top: -15vh; /* halbe Breite/Höhe */
+    width: 30vh;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #ccc;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+/* Ende Responsive Design */
+
+
+.grid-container > div {
+    position: relative;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1em;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
+.point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: black;
+    height: 30%;
+    width: 30%;
+    margin: -15% 0 0 -15%;
+}
+
+.pointColour {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: red;
+    height: 30%;
+    width: 30%;
+    margin: -15% 0 0 -15%;
+}
+
+
+.spellAnimation {
+    width: 5vh;
+    height: 5vh;
+    margin: auto;
+    position: sticky;
+    border-radius: 50%;
+    background-color: blue;
+    visibility: hidden;
+    z-index: 2;
+}
+
+
+#enemyAttack {
+    padding-top: 0vh;
+    width: 5vh;
+    height: 5vh;
+    margin: auto;
+    position: relative;
+    border-radius: 50%;
+    visibility: hidden;
+    background-color: red;
+    z-index: 2;
+}
+
+
+.myEnemy {
+    padding-top: 10vh;
+    margin: auto;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0vh 10vh 20vh 10vh;
+    border-color: transparent transparent white transparent;
+    z-index: 3;
+
+
+}
+
+.boeseAugen1 {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    transform: translate(-120%, 270%);
+    border-style: solid;
+    border-width: 0vh 2.5vh 3vh 0vh;
+    z-index: 10;
+    border-color: transparent transparent #200022 transparent;
+}
+
+.boeseAugen2 {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    transform: translate(20%, 170%);
+    border-style: solid;
+    border-width: 0vh 0vh 3vh 2.5vh;
+    z-index: 10;
+    border-color: transparent transparent #200022 transparent;
+}
+
+#mainMenu { /* TODO make it responisve*/
+    height: 100vh;
+    position: center;
+    font-size: 10vh;
+}
+
+#gameStart { /* this 3 are */
+    top: 10vh;
+    color: darkred;
+}
+
+#gameTutorial {
+    color: darkred;
+}
+
+#gameEnding {
+    color: darkred;
+    visibility: hidden;
+    height: 0px;
+}
+
+#gameBack {
+    color: darkred;
+    visibility: hidden;
+}
+
+#gameMain {
+    visibility: hidden;
+}
+
+
+h1 {
+
+    position: absolute;
+    padding: 1vh;
+    font-size: 4vh;
+    top: 5vh;
+    color: darkred;
+}
+
+h2 {
+    position: absolute;
+    padding: 1vh;
+    font-size: 4vh;
+    top: 20vh;
+    color: darkgreen;
+}
+
+h3 {
+    position: center;
+    font-size: 4vh;
+    color: darkred;
+}
+
+#mainTutorial {
+    visibility: hidden;
+    margin: auto;
+    position: relative;
+    top: 20vh;
+
+}
+
+#tutorialPic {
+    margin: auto;
+    width: 45vh;
+    height: 45vh;
+    content: url("big tutorial.png");
+}
+
+p {
+    margin: auto;
+    padding: 2vh;
+    font-size: 2.5vh;
+    color: darkred;
+}
+

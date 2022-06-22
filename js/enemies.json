@@ -1,0 +1,60 @@
+[
+  {
+    "hp": 40,
+    "damage": 10,
+    "color": "#664008",
+    "interval": 10000,
+    "type": "Ground"
+  },
+  {
+    "hp": 40,
+    "damage": 10,
+    "color": "white",
+    "interval": 10000,
+    "type": "Ice"
+  },
+  {
+    "hp": 40,
+    "damage": 15,
+    "color": "aqua",
+    "interval": 5000,
+    "type": "Lightning"
+  },
+  {
+    "hp": 120,
+    "damage": 20,
+    "color": "#664008",
+    "interval": 5000,
+    "type": "Ground"
+  },
+  {
+    "hp": 120,
+    "damage": 20,
+    "color": "white",
+    "interval": 10000,
+    "type": "Ice"
+  },
+  {
+    "hp": 120,
+    "damage": 25,
+    "color": "aqua",
+    "interval": 10000,
+    "type": "Lightning"
+  },
+  {
+    "hp": 160,
+    "damage": 30,
+    "color": "#664008",
+    "interval": 5000,
+    "type": "Ground"
+  },
+  {
+    "hp": 160,
+    "damage": 30,
+    "color": "white",
+    "interval": 5000,
+    "type": "Ice"
+  }
+]
+
+
