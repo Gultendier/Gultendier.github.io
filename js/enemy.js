@@ -1,6 +1,6 @@
 let enemyHp; // life of enemy
-let enemyDamage; // damage of enemy
-let enemyType;
+let enemyDamage; // enemy's damage
+let enemyType; // which typ the enemy has
 let level = 0; // level stage
 let vh = 42
 window.addEventListener("load", () => {
@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
 let enemyLib = [];
 
 
-/* In case Fetch fails
+/* In case Fetch fails it shouldn't be need, but you never know
 let enemiesJson = toString([{"hp": 100, "damage": 10, "color": "green", "interval": 10000},
   {"hp": 150, "damage": 10, "color": "white", "interval": 10000},
   {"hp": 200, "damage": 15, "color": "pink", "interval": 5000},
@@ -22,6 +22,7 @@ let enemiesJson = toString([{"hp": 100, "damage": 10, "color": "green", "interva
 
 console.log(enemiesJson); */
 
+/* The fetching of json file enemies*/
 fetch("js/enemies.json").then(data => data.json()).then(data => {
     enemyLib = data;
     console.log("yay fetch")
@@ -42,9 +43,9 @@ function whichEnemy(level) {
         enemyType = enemyLib[level].type;
         enemyInterval = enemyLib[level].interval;
 
-        enemyHealthUpdate();
+        enemyHealthUpdate(); // updates the playeHp counter
     } else {// wining the game
-        console.log("game won")
+
         let ending = document.getElementById("gameEnding");
         let playerSpell = document.getElementsByClassName("spellAnimation");
         let mainMenu = document.getElementById("mainMenu");
@@ -54,6 +55,7 @@ function whichEnemy(level) {
         enemyHealthUpdate();
         playerHealthUpdate();
 
+        /* this makes the ending screen "visible" and stops the game */
         gameMain.style.visibility = "hidden";
         ending.style.visibility = "visible";
         ending.style.height = "100vh";
@@ -66,6 +68,7 @@ function whichEnemy(level) {
 
 }
 
+/* function for enemy life lose*/
 function enemyTakesDamage() {
     switch (spellChoice) {
         case "Slash":
@@ -81,12 +84,11 @@ function enemyTakesDamage() {
             enemyHp = enemyHp - groundSpellDamage();
             break;
     }
-
     enemyDeath();
     enemyHealthUpdate();
-
 }
 
+/* the following function is for "resistances and weaknesses" */
 function lightningSpellDamage() {
     switch (enemyType) {
         case "Lightning":
@@ -98,6 +100,7 @@ function lightningSpellDamage() {
     }
 }
 
+/* the following function is for "resistances and weaknesses" */
 function groundSpellDamage() {
     switch (enemyType) {
         case "Lightning":
@@ -109,6 +112,7 @@ function groundSpellDamage() {
     }
 }
 
+/* the following function is for "resistances and weaknesses" */
 function iceSpellDamage() {
     switch (enemyType) {
         case "Lightning":
@@ -124,7 +128,8 @@ function enemyHealthUpdate() {
     document.getElementById("eHp").innerHTML = enemyHp;
 }
 
-function enemyDeath() {//
+/* enemy death and new level */
+function enemyDeath() {
     if (enemyHp <= 0) {
         console.log("enemy died");
         enemyHp = 0; // set to 0 so it will never show negative Hp
@@ -133,7 +138,6 @@ function enemyDeath() {//
         clearInterval() // TODO find out why we clear the Interval here
         document.getElementById("enemyAttack").style.visibility = "hidden";
     }
-
 }
 
 

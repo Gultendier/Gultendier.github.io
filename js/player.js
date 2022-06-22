@@ -1,17 +1,19 @@
 /*for Player*/
 
-let playerHp = 1000;
+let playerHp = 1000; // the player Health
 
-function playerHealth() {
+/* when the enemy's spell reaches it target the player loses life */
+function playerTakesDamage() {
     playerHp = playerHp - enemyDamage;
     playerDeath();
     playerHealthUpdate()
 }
-
+/* updates playerHp innerHtml */
 function playerHealthUpdate() {
     document.getElementById("pHp").innerHTML = playerHp;
 }
 
+/* function for player's death and the "lose-screen" */
 function playerDeath() {
     if (playerHp <= 0) {
 
@@ -19,17 +21,17 @@ function playerDeath() {
         let mainMenu = document.getElementById("mainMenu");
         let gameMain = document.getElementById("gameMain");
 
-        playerHp = 0; // so it doesnt your life cant fall under 0
-        playerHealthUpdate(); // updates your hp
-        enemyHealthUpdate(); // updates the healt of both
+        playerHp = 0; // 0 so the player Hp counter doesn't show lower then zero
+        playerHealthUpdate();
+        enemyHealthUpdate();
         clearInterval(enemyDps); // stops the enemy's attack from being cast
 
-        ending.style.visibility = "visible"; // makes the end screen visible
+        /* makes the losing-screen vivible */
+        ending.style.visibility = "visible";
         ending.style.height = "100vh";
         mainMenu.style.visibility = "hidden";
         gameMain.style.visibility = "hidden";
         document.getElementById("enemyAttack").remove();
-
         document.getElementById("gameEnding").innerHTML = "YOU DIED";
     }
 }

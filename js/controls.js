@@ -131,22 +131,17 @@ function castMagic() {
             case "LineRight":
             case "LineUp":
             case "LineDown":
-                console.log("Slash"); // TODO Debug
-                spellChoice = "Slash";
                 spellAnimation();
                 break;
             case "LightningAttack":
-                console.log("Lightning"); // TODO Debug
                 spellChoice = "Lightning";
                 spellAnimation();
                 break;
             case "IceAttack":
-                console.log("Ice"); // TODO Debug
                 spellChoice = "Ice";
                 spellAnimation();
                 break;
             case "GroundAttack":
-                console.log("Ground"); // TODO Debug
                 spellChoice = "Ground";
                 spellAnimation();
                 break;

@@ -6,20 +6,17 @@ let id = null; // interval variable
 let spellCount = []; // counts how often a symbol was drawn right
 let elem; // variable for creation of div
 
-function spellAnimation() { //movement and style changing of #myAnimation
+// The animation of player Spells
+function spellAnimation() {
 
-
-    elem = document.createElement("div"); // creates an div and adds it to elem
-    elem.className = "spellAnimation"; // the div becomes the calls "spellAnimation"
-
+    elem = document.createElement("div"); // creates a div and adds it to elem
+    elem.className = "spellAnimation"; // the div becomes the class "spellAnimation" assign.
 
     let mainelem = document.getElementsByTagName("main"); // adds the main to mainelem
-    mainelem.item(0).appendChild(elem); // make the created div a child element of main
+    mainelem.item(0).appendChild(elem); // makes "spellAnimation" a child element of main
 
-    switch (spellChoice) { //TODO each case changes the style of the spell, maybe make it into a class?
-        case "Slash":
-            console.log("Slash")
-            break;
+    /* The Style changes of player spells*/
+    switch (spellChoice) {
         case "Lightning":
             console.log("Lightning")
             elem.style.backgroundColor = "aqua";
@@ -41,35 +38,37 @@ function spellAnimation() { //movement and style changing of #myAnimation
             elem.style.height = "30%";
             elem.style.width = "100%";
             break;
+        default:
+            console.log("Slash")
+            break;
     }
-    elem.setAttribute("pos", "65"); // start postion of spell
-    elem.style.top = '65 vh'; // pos
-    spellCount.push(elem); //
-    clearInterval(id); // stops the interval if missing the spell gets faster for each spell cast
+    elem.setAttribute("pos", "65"); // start position of spell
+    elem.style.top = '65 vh'; // the attribute become now a "style"
+    spellCount.push(elem); // adds the spells into the array
+
+    clearInterval(id); // clears the interval of frame, needed, or it will repeat to often
     id = setInterval(frame, 10);// 10 - 20 how fast the spell moves
 }
 
-function frame() { // function for the movement of spells
+/* function for the movement of spells */
+function frame() {
 
     for (let i = 0; i < spellCount.length; i++) {
-        if (spellCount[i].getAttribute("pos") <= 25) { // checks if the "spell" reached it target 0 for interface end
+        /* checks if the spell reached it position and how long it should stay */
+        if (spellCount[i].getAttribute("pos") <= 25) {
             spellCount[i].remove(); // removes the object
             spellCount.shift(); // removes the first element of array and returns it
 
-            enemyTakesDamage(); // deals damage to the enemy
+            enemyTakesDamage(); // after the chosen spell reaches it targets it deals damage
 
-        } else { // if the spell isn't on it end position it will move
+        } else { // if the spell didn't reach it goal, it will change it positions til it does
             spellCount[i].setAttribute("pos", spellCount[i].getAttribute("pos") - 1);
-            spellCount[i].style.top = spellCount[i].getAttribute("pos") + 'vh'; // changes the postion of the object by 1vh
+            spellCount[i].style.top = spellCount[i].getAttribute("pos") + 'vh'; // changes the position of the object by 1vh
             elem.style.visibility = "visible"; // makes the spell visible
-
-
-
-
         }
     }
 
-    if (spellCount.length === 0) { // when array is empty clear the intervval
+    if (spellCount.length === 0) { // when array is empty clear the interval
         clearInterval(id);
     }
 }

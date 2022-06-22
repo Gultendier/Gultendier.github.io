@@ -1,3 +1,6 @@
+//TODO this is right now not needed but will be used to make the code cleaner, continue adding more events
+
+
 /* This is the js for all the things*/
 
 /* all the initializations of the documents */
