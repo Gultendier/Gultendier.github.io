@@ -54,16 +54,20 @@ function whichEnemy(level) {
         level = 0;
         enemyHealthUpdate();
         playerHealthUpdate();
+        ending.style.height = "100vh";
+        ending.innerHTML = "YOU WON";
 
         /* this makes the ending screen "visible" and stops the game */
-        gameMain.style.visibility = "hidden";
-        ending.style.visibility = "visible";
-        ending.style.height = "100vh";
         mainMenu.style.visibility = "hidden";
+        mainMenu.style.height = "100vh"
+        ending.style.visibility = "visible"
+        gameMain.style.visibility = "hidden";
+
+
         playerSpell.style.visibility = "hidden";
-        document.querySelector("#gameMain *").style.visibility = "hidden";
+        // document.querySelector("#gameMain *").style.visibility = "hidden";
         document.getElementById("enemyAttack").remove();
-        document.getElementById("gameEnding").innerHTML = "YOU WON";
+
     }
 
 }
@@ -72,7 +76,7 @@ function whichEnemy(level) {
 function enemyTakesDamage() {
     switch (spellChoice) {
         case "Slash":
-            enemyHp = enemyHp - 10;
+            enemyHp = enemyHp - 100000000;
             break;
         case "Lightning":
             enemyHp = enemyHp - lightningSpellDamage();
@@ -134,9 +138,9 @@ function enemyDeath() {
         console.log("enemy died");
         enemyHp = 0; // set to 0 so it will never show negative Hp
         level++; // +1 when enemy killed
+        document.getElementById("enemyAttack").style.visibility = "hidden";
         whichEnemy(level); // new stage & new enemy
         clearInterval() // TODO find out why we clear the Interval here
-        document.getElementById("enemyAttack").style.visibility = "hidden";
     }
 }
 

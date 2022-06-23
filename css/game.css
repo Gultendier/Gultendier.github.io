@@ -50,7 +50,6 @@ html, body {
 
 #gameEnding {
     color: darkred;
-    visibility: hidden;
     height: 0px;
 }
 
