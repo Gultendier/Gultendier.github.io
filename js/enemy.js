@@ -76,7 +76,7 @@ function whichEnemy(level) {
 function enemyTakesDamage() {
     switch (spellChoice) {
         case "Slash":
-            enemyHp = enemyHp - 100000000;
+            enemyHp = enemyHp - 10;
             break;
         case "Lightning":
             enemyHp = enemyHp - lightningSpellDamage();
