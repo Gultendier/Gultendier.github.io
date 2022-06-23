@@ -1,8 +1,8 @@
 # Web Anwendungs Dokumentation    
 
-Jan Ole Weighardt           939612
-Helene Ilse Nora Lüning     939476
-Lukas Szupka                940167
+<p>Jan Ole Weighardt           939612</p>
+<p>Helene Ilse Nora Lüning     939476</p>
+<p>Lukas Szupka                940167</p>
 
 Im Spiel bekämpft man Dreiecke mit Magie.
 Die Magie wird ausgelöst in dem man die hellblauen Punkte in der richtigen Reihenfolge verbindet. Die Magie macht mehr Schaden, wenn sie gegen die richtige Typ von Dreieck Eingesetzt wird.
