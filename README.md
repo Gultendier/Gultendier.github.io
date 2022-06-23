@@ -1,4 +1,3 @@
-# Gultendier.github.io
 # Web Anwendungs Dokumentation    
 
 Jan Ole Weighardt           939612
