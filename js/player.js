@@ -1,6 +1,6 @@
 /*for Player*/
 
-let playerHp = 1000; // the player Health
+let playerHp = 400; // the player Health
 
 /* when the enemy's spell reaches it target the player loses life */
 function playerTakesDamage() {

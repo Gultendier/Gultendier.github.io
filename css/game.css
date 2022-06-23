@@ -15,9 +15,8 @@ html, body {
     overflow: hidden;
 }
 
-/* work */
+/* responsive design */
 @media (min-aspect-ratio: 9/16) {
-    /* Legt das Seitenverhältnis an einer gewissen Breite fest */
     main {
         width: 56vh;
         margin: auto;
@@ -29,6 +28,7 @@ html, body {
 #mainMenu {
     height: 100vh;
     position: relative;
+    text-align: center;
     margin: auto;
     font-size: 10vh;
 }
