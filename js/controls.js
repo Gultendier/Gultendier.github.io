@@ -17,16 +17,16 @@ function touchHasMoved(event) {
 //Spell choice
 let spellChoice;
 
-//Punkte importieren
+//point import
 const points = document.getElementsByClassName("point");
 
-// Maus als nicht geklickt festsetzten
+// mouse initialised as false
 let mouseIsDown = false;
 
 
 // * Symbole
 
-// symbollib: ein array, dass alle Symbole sammelt
+// symbollib: an array, that collects all symbols
 const symbolLib = [];
 const symInput = new Set();
 

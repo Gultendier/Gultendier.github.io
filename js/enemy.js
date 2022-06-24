@@ -1,4 +1,4 @@
-let enemyHp; // life of enemy
+let enemyHp; // enemy's health
 let enemyDamage; // enemy's damage
 let enemyType; // which typ the enemy has
 let level = 0; // level stage

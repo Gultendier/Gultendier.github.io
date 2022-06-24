@@ -1,5 +1,5 @@
 /*This is the animation of the enemies spells,
- it changes the top style of the css */
+ it changes the style of the css */
 
 let ident = null; // interval
 let position = 20; // start position of enemy Spell
