@@ -9,19 +9,6 @@ window.addEventListener("load", () => {
 
 let enemyLib = [];
 
-
-/* In case Fetch fails it shouldn't be need, but you never know
-let enemiesJson = toString([{"hp": 100, "damage": 10, "color": "green", "interval": 10000},
-  {"hp": 150, "damage": 10, "color": "white", "interval": 10000},
-  {"hp": 200, "damage": 15, "color": "pink", "interval": 5000},
-  {"hp": 200, "damage": 20, "color": "purple", "interval": 5000},
-  {"hp": 250, "damage": 20, "color": "yellow", "interval": 10000},
-  {"hp": 250, "damage": 25, "color": "blue", "interval": 10000},
-  {"hp": 300, "damage": 30, "color": "orange", "interval": 5000},
-  {"hp": 350, "damage": 30, "color": "red", "interval": 5000}]);
-
-console.log(enemiesJson); */
-
 /* The fetching of json file enemies*/
 fetch("js/enemies.json").then(data => data.json()).then(data => {
     enemyLib = data;
@@ -76,7 +63,7 @@ function whichEnemy(level) {
 function enemyTakesDamage() {
     switch (spellChoice) {
         case "Slash":
-            enemyHp = enemyHp - 10;
+            enemyHp = enemyHp - 200;
             break;
         case "Lightning":
             enemyHp = enemyHp - lightningSpellDamage();
@@ -135,12 +122,9 @@ function enemyHealthUpdate() {
 /* enemy death and new level */
 function enemyDeath() {
     if (enemyHp <= 0) {
-        console.log("enemy died");
         enemyHp = 0; // set to 0 so it will never show negative Hp
         level++; // +1 when enemy killed
-        document.getElementById("enemyAttack").style.visibility = "hidden";
         whichEnemy(level); // new stage & new enemy
-        clearInterval() // TODO find out why we clear the Interval here
     }
 }
 

@@ -113,11 +113,10 @@ function pointClicked(element) {
 }
 
 function castMagic() {
-    console.log("castMagic"); // TODO Debug
     let symbolFound = false;
     let foundSymbol;
 
-    for (let j = 0; j < symbolLib.length; j++) { // TODO 4 ist Platzhalter für die Anzahl Symbole
+    for (let j = 0; j < symbolLib.length; j++) {
         if (compareSymbols(symbolLib[j].pattern, Array.from(symInput))) {
             symbolFound = true;
             foundSymbol = symbolLib[j];

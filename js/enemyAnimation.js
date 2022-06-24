@@ -27,7 +27,7 @@ function enemyCasts() {
                 position = 20 // resets the position
                 clearInterval(ident);
                 playerTakesDamage(); // player damage
-                //TODO enemyMovement.style.visibility = "hidden" here so it isn't need in endscreens
+                enemyMovement.style.visibility = "hidden" //here so it isn't need in endscreens
 
                 if (level < enemyLib.length) {
                     startOfAttacks(); // restarts the attack again after it reaches it goal, needed or bug

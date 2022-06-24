@@ -140,23 +140,25 @@ p {
 /* the header are the enemy and player health*/
 /* The Style of the enemy's life Counter*/
 h1 {
-    position: absolute;
+    position: relative;
     padding: 1vh;
     font-size: 4vh;
-    top: 5vh;
+    float: left;
+    bottom: 39vh;
     color: darkred;
 }
 
 /* The Style of the player's life Counter*/
 h2 {
-    position: absolute;
+    position: relative;
     padding: 1vh;
     font-size: 4vh;
-    top: 20vh;
+    float: right;
+    bottom: 39vh;
     color: darkgreen;
 }
 
-/* The Style of the player Spellspell "slash", they are changed in the animation.js
+/* The Style of the player spell "slash", they are changed in the animation.js
  if another spell was "casted". Also this Style is used when a new div is created through
   document.create in animation.js*/
 .spellAnimation {
